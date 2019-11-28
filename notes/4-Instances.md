@@ -27,9 +27,14 @@ results.append(res)
 ```
 `res` 即为 `proposals`  
 可以推断得出有 proposal_boxes, objectness_logits 这两个 field 
-### format of res
-TODO
+### format of proposal_boxes
+    boxes = Boxes(topk_proposals[n])
+#### class `Boxes` stores a N * 4 Tensor in self.tensor   
+    __getitem__(self, item: Union[int, slice, torch.BoolTensor]) -> "`Boxes`"
+    pairwise_iou(boxes1, boxes2) -> (N, M) Tensor
+    matched_boxlist_iou(boxes1, boxes2) -> (N, ) Tensor # compute iou between corresponding pairs 
+详细见 detectron2 docs
 ### format of objectness_logits
-TODO
+float Tensor
 
 
