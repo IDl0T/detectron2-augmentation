@@ -9,7 +9,7 @@ There are 2 possible solutions:
 ~~Augment the `evaluator`~~
 
 ## Get Ground Truth Bounding Boxes
-TODOTODOTODOTODOTODO
+Use `DefaultPredictor`, which reads an BGR image and returns the output with format of the model OUTPUT
 
 ## class CityscapesEvaluator
 see [official docs](https://detectron2.readthedocs.io/modules/evaluation.html)  
